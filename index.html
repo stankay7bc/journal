@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <main>
+    <header><h1>My Blog</h1></header>
+    <section>
+      <article><a href="/">Why I Love Tomatoes</a></article>
+    </section>
+  </main>
+  <script>
+      var pageLink = document.querySelector('a');
+      pageLink.href = (() => {
+        let regex = /(.+)?(?=index)/; 
+        let result = window.location.pathname.match(regex);
+        return result[0]+'page.html';
+      })();
+  </script>
+</body>
+</html>
