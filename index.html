@@ -13,9 +13,9 @@
   <script>
       var pageLink = document.querySelector('a');
       pageLink.href = (() => {
-        let regex = /(.+)?(?=index)/; 
+        let regex = /(.+)(?=\/)/; 
         let result = window.location.pathname.match(regex);
-        return result[0]+'page.html';
+        return result[0]+'/page.html';
       })();
   </script>
 </body>
