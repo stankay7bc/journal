@@ -7,16 +7,8 @@
   <main>
     <header><h1>My Blog</h1></header>
     <section>
-      <article><a href="/">Why I Love Tomatoes</a></article>
+      <article><a href="page.html">Why I Love Tomatoes</a></article>
     </section>
   </main>
-  <script>
-      var pageLink = document.querySelector('a');
-      pageLink.href = (() => {
-        let regex = /(.+)(?=\/)/; 
-        let result = window.location.pathname.match(regex);
-        return result[0]+'/page.html';
-      })();
-  </script>
 </body>
 </html>

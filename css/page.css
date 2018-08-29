@@ -1,4 +1,26 @@
+body {
+  background-color:#dddddd;
+}
+
+main {
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+section {
+  max-width:30em;
+}
 
 article {
-  white-space: pre-wrap;
+  white-space:pre-wrap;
+  margin:1em 1em 0 1em;
+  text-align:justify;
+  line-height:1.4;
+}
+
+#nav {
+  position:absolute;
+  top:0em;
+  right:0em;
 }
