@@ -10,6 +10,7 @@ main {
 
 section {
   max-width:30em;
+  font-size:1.2em;
 }
 
 article {
@@ -20,7 +21,17 @@ article {
 }
 
 #nav {
-  position:absolute;
-  top:0em;
-  right:0em;
+  position:fixed;
+  top:1em;
+  right:1em;
+}
+
+#nav a {
+  text-decoration: none;
+  color:gray;
+  font-size:1.25em;
+}
+
+#nav:hover {
+  transform:scale(1.25);
 }
