@@ -11,7 +11,8 @@ document.body.onload = event => {
     
     let result = `${response.reduce((html,fileInfo)=>{
       return `${html}<li><a href="page.html?post=${
-        fileInfo.name.slice(0,-4)}">${fileInfo.name}</a></li>`;
+        fileInfo.name.slice(0,-4)}">${
+        fileInfo.name.slice(9,-4).replace(/_/g,' ')}</a></li>`;
     },'<ul>')}</ul>`;
     
     document.querySelector('article').innerHTML = result;
