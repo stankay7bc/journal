@@ -1,6 +1,12 @@
 document.body.onload = event => {
 
-  let postLink ='https://raw.githubusercontent.com/stankay7bc/journal/master/posts/tomatoes.txt';
+
+  let data = window.location.search.slice(1).split('&').map(param=>{
+   return param.split("=");
+  });
+
+  let postLink =
+    `https://raw.githubusercontent.com/stankay7bc/journal/master/posts/${data[0][1]}.txt`;
   let myRequest = new Request(postLink);
 
   fetch(myRequest).then(function(response) {
