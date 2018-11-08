@@ -2,6 +2,9 @@ body {
   background-color:#dddddd;
 }
 
+body {
+  margin: 0 0 0 0;
+}
 main {
   position:relative;
   display:flex;
@@ -9,21 +12,22 @@ main {
 }
 
 section {
+  outline:1px dashed;
   max-width:30em;
   font-size:1.2em;
 }
 
 article {
   white-space:pre-wrap;
-  margin:1em 1em 0 1em;
-  text-align:justify;
+  margin:0em 1em 0 1em;
   line-height:1.4;
 }
 
 #nav {
+  outline:1px dashed;
   position:fixed;
-  top:1em;
-  right:1em;
+  transform:translateX(18em);
+  padding:0.25em;
 }
 
 #nav a {
@@ -32,6 +36,11 @@ article {
   font-size:1.25em;
 }
 
-#nav:hover {
-  transform:scale(1.25);
+@media only screen and (max-width: 875px) {
+  #nav {
+    outline:1px dashed;
+    position:fixed;
+    right:0;
+    transform:translateX(0);
+  }
 }
