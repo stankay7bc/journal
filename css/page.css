@@ -12,9 +12,9 @@ main {
 }
 
 section {
-  outline:1px dashed;
   max-width:30em;
   font-size:1.2em;
+  margin:1.25em 0 1.25em 0;
 }
 
 article {
@@ -24,7 +24,6 @@ article {
 }
 
 #nav {
-  outline:1px dashed;
   position:fixed;
   transform:translateX(18em);
   padding:0.25em;
@@ -33,14 +32,21 @@ article {
 #nav a {
   text-decoration: none;
   color:gray;
-  font-size:1.25em;
+  font-size:1.35em;
 }
 
-@media only screen and (max-width: 875px) {
+#nav:hover {
+  transform:translateX(18em) scale(1.5);
+}
+
+@media only screen and (max-width: 38em) {
   #nav {
-    outline:1px dashed;
     position:fixed;
     right:0;
-    transform:translateX(0);
+    padding:0 0.45em 0 0;
+    transform:translate(0);
+  }
+  #nav:hover {
+    transform:scale(1.5);
   }
 }
