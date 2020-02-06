@@ -13,7 +13,7 @@ document.body.onload = event => {
     return response.text();
   }).then(function(response) {
     //console.log(response);
-    document.querySelector('article').textContent = response;
+    document.querySelector('article').innerHTML = response;
   });
   
 };
