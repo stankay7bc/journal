@@ -15,7 +15,7 @@ document.body.onload = event => {
         fileInfo.name.slice(9,-4).replace(/_/g,' ')}</a></li>`;
     },'<ul>')}</ul>`;
     
-    document.querySelector('#posts-list').innerHTML = result;
+    document.querySelector('#posts').innerHTML = result;
   });
   
 };
