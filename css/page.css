@@ -10,27 +10,25 @@ main {
 }
 
 section {
-  max-width:30em;
+  max-width:32em;
   font-size:1.2em;
-  margin:1.25em 0 1.25em 0;
   flex-grow:1;
 }
 
 article {
   white-space:pre-wrap;
-  margin:0em 1em 0 1em;
   line-height:1.4;
 }
 
 article iframe {
   width:100%;
-  height:90vh;
+  height:100vh;
   border:none;
 }
 
 #nav {
   position:fixed;
-  transform:translateX(18em);
+  transform:translateX(20em);
   padding:0.25em;
 }
 
@@ -41,7 +39,7 @@ article iframe {
 }
 
 #nav:hover {
-  transform:translateX(18em) scale(1.5);
+  transform:translateX(20em) scale(1.5);
 }
 
 @media only screen and (max-width: 38em) {
