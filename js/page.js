@@ -1,12 +1,9 @@
 document.body.onload = event => {
 
-
-  let data = window.location.search.slice(1).split('&').map(param=>{
-   return param.split("=");
-  });
+  let data = window.location.search.match(/(\d+)_(.+)/);
 
   let postLink =
-    `https://raw.githubusercontent.com/stankay7bc/journal/master/posts/${data[0][1]}.txt`;
+    `https://raw.githubusercontent.com/stankay7bc/journal/master/posts/${data[0]}.txt`;
   let myRequest = new Request(postLink);
 
   fetch(myRequest).then(function(response) {
