@@ -1,16 +1,14 @@
 document.body.onload = event => {
 
-  let data = window.location.search.match(/(\d+)_(.+)/);
+  let index = Number(window.location.search.match(/\d{1}/));
 
-  let postLink =
-    `https://raw.githubusercontent.com/stankay7bc/journal/master/posts/${data[0]}.txt`;
-  let myRequest = new Request(postLink);
+  let myRequest = new Request('posts.json');
 
   fetch(myRequest).then(function(response) {
-    return response.text();
-  }).then(function(response) {
-    //console.log(response);
-    document.querySelector('article').innerHTML = response;
+    return response.json();
+  }).then(function(json) {
+    //console.log(json);
+    document.querySelector('article').innerHTML = `<iframe src=${json[index].link}></iframe>`;
   });
   
 };
