@@ -10,7 +10,7 @@ document.body.onload = event => {
     return response.json();
   }).then(function(json) {
     //console.log(json);
-    document.querySelector('article').innerHTML = `<iframe src=${json[index].link}></iframe>`;
+    document.querySelector('iframe').src = json[index].link;
   });
   
 };
