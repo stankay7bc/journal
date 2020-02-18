@@ -6,6 +6,7 @@ a:link {
  text-decoration:none;
  color:#4c4a4a;
  font-weight: bold;
+ font-size:1.25em;
 } 
 
 a:visited {
@@ -14,7 +15,6 @@ a:visited {
 
 li {
   margin-bottom: 0.5em;
-  font-size:1.25em;
 }
 
 li span {
