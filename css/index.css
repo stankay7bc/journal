@@ -17,6 +17,10 @@ li {
   font-size:1.25em;
 }
 
+li span {
+  font-style:italic;
+}
+
 h1 {
   padding-left:0.25em;
 }

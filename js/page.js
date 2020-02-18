@@ -2,9 +2,11 @@ document.body.onload = event => {
 
   let index = Number(window.location.search.match(/\d{1}/));
 
-  let myRequest = new Request('posts.json');
-
-  fetch(myRequest).then(function(response) {
+  fetch(new Request('config.json')).then(response=>{
+    return response.json();
+  }).then(function(params){
+    return fetch(new Request(params.posts_url));
+  }).then(function(response) {
     return response.json();
   }).then(function(json) {
     //console.log(json);
