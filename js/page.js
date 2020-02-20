@@ -8,9 +8,13 @@ document.body.onload = event => {
     return fetch(new Request(configs.blog_url));
   }).then(response=>{
     return response.json();
-  }).then(function(json) {
-    //console.log(json);
-    document.querySelector('iframe').src = json.posts[index].link;
+  }).then(function(response) {
+    return fetch(response.posts_url);
+  }).then(response=>{return response.text();})
+  .then(text=>{
+    return tsvToJson(text);
+  }).then(records=>{
+    document.querySelector('iframe').src = records[index].link;
   });
   
 };

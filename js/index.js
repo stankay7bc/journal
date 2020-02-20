@@ -8,12 +8,16 @@ document.body.onload = event => {
   }).then(function(response) {
       return response.json();
   }).then(function(response) {
-
-    let ulHtml = `${response.posts.reduce((html,post,index)=>{
+    document.querySelector("h1").innerText = response.blog_title;
+    return fetch(response.posts_url);
+  }).then(response=>{return response.text();})
+  .then(text=>{
+    return tsvToJson(text);
+  }).then(records=>{
+    //console.log(records);
+    let ulHtml = `${records.reduce((html,post,index)=>{
       return `${html}<li>${postTitleView(post,index)}</li>`;
     },'<ul>')}</ul>`;
-    
-    document.querySelector("h1").innerText = response.blog_title;
     document.querySelector('#posts').innerHTML = ulHtml;
   });
 
