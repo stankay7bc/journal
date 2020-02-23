@@ -15,7 +15,7 @@ document.body.onload = event => {
     return fetch(new Request(response.posts_url,{headers:headers,mode:'cors'}));
   }).then(response=>{return response.text();})
   .then(text=>{
-    return tsvToJson(text);
+    return tsvToJson(text).reverse();
   }).then(records=>{
     document.querySelector('iframe').src = records[index].link;
   });
