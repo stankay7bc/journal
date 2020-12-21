@@ -7,10 +7,6 @@ document.body.onload = event => {
 
   fetch('config.json').then(response=>{
     return response.json();
-  }).then(configs=>{
-    return fetch(new Request(configs.blog_url,{headers:headers,mode:'cors'}));
-  }).then(response=>{
-    return response.json();
   }).then(function(response) {
     return fetch(new Request(response.posts_url,{headers:headers,mode:'cors'}));
   }).then(response=>{return response.text();})

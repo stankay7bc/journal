@@ -6,10 +6,6 @@ document.body.onload = event => {
 
   fetch('config.json').then(response=>{
     return response.json();
-  }).then(configs=>{
-    return fetch(new Request(configs.blog_url,{headers:headers,mode:'cors'}));
-  }).then(function(response) {
-      return response.json();
   }).then(function(response) {
     document.querySelector("h1").innerText = response.blog_title;
     return fetch(new Request(response.posts_url,{headers:headers,mode:'cors'}));
@@ -27,10 +23,10 @@ document.body.onload = event => {
 };
 
 /**
- * 
- * @param {Object} post 
- * @param {Number} index 
- * @return {String} html-formatted string
+ * html template for a post link 
+ * @param {object} post 
+ * @param {number} index 
+ * @return {string} html-formatted string
  */
 function postTitleView(post,index) {
   let options = { year: 'numeric', month: 'long', day: 'numeric' };

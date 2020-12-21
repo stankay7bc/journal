@@ -1,8 +1,8 @@
 
 /**
- * 
- * @param {String} tsv 
- * @return {Object}
+ * convert a string of tab-separated values to json
+ * @param {string} tsv 
+ * @return {object}
  */
 function tsvToJson(tsv) {
   let records = [];
