@@ -31,7 +31,7 @@ document.body.onload = event => {
 function postTitleView(post,index) {
   let options = { year: 'numeric', month: 'long', day: 'numeric' };
   return `<section>
-<div><a href="page.html?post=${index}">${post.title}</a></div>
+<div><a href="${post.link}">${post.title}</a></div>
 <div><span>${(new Date(post.time)).toLocaleDateString('ru',options)}</span></div>
 </section>`;
 }
